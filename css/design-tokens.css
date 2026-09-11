@@ -1,0 +1,112 @@
+/**
+ * 「轻旅」UX Case Study 设计系统基础变量
+ * 提炼自移动端产品 Figma 视觉规范，并转译为适合现代桌面端与全设备阅读的 Web Tokens
+ */
+
+:root {
+  /* 品牌核心色彩 (Brand Colors) */
+  --color-primary: #1B93C4;
+  --color-primary-hover: #147da8;
+  --color-primary-active: #0f668a;
+  --color-primary-light: #E0F4FB;
+  --color-primary-subtle: #F0F8FD;
+  --color-primary-gradient: linear-gradient(135deg, #22A8D0 0%, #157DAA 100%);
+  --color-primary-glow: rgba(27, 147, 196, 0.25);
+
+  /* 辅助与状态色彩 (Accent & Functional) */
+  --color-accent-gold: #F59E0B;
+  --color-accent-coral: #F43F5E;
+  --color-accent-emerald: #10B981;
+  --color-badge-bg: rgba(27, 147, 196, 0.12);
+  --color-badge-text: #0E7490;
+
+  /* 中性色体系 (Neutral Palette) */
+  --color-bg-body: #F8FAFC;
+  --color-bg-surface: #FFFFFF;
+  --color-bg-surface-elevated: #FFFFFF;
+  --color-bg-muted: #F1F5F9;
+  --color-bg-subtle: #F8FAFC;
+  
+  --color-border-subtle: #E2E8F0;
+  --color-border-hover: #CBD5E1;
+  --color-border-focus: #1B93C4;
+
+  /* 文本色阶 (Typography Colors) - 严格保证对比度高于 WCAG AA */
+  --color-text-primary: #0F172A;     /* 主标题与核心正文，对比度 > 12:1 */
+  --color-text-secondary: #334155;   /* 次级段落与列表，对比度 > 7:1 */
+  --color-text-tertiary: #64748B;    /* 标签与时间戳，对比度 > 4.5:1 */
+  --color-text-muted: #94A3B8;       /* 辅助微文本与水印 */
+  --color-text-inverse: #FFFFFF;     /* 反色文本 */
+  --color-text-brand: #157DAA;       /* 品牌强调文本 */
+
+  /* 排版字体 (Font Family) */
+  --font-sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+
+  /* 字号阶梯 (Modular Typography Scale - 流体字体适配) */
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-md: 1.125rem;   /* 18px */
+  --font-size-lg: 1.25rem;    /* 20px */
+  --font-size-xl: 1.5rem;     /* 24px */
+  --font-size-2xl: 1.875rem;  /* 30px */
+  --font-size-3xl: 2.25rem;   /* 36px */
+  --font-size-4xl: 3rem;      /* 48px */
+
+  /* 行高 (Line Height) */
+  --line-height-tight: 1.2;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.6;
+  --line-height-relaxed: 1.75;
+
+  /* 圆角律动 (Border Radius System) */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 22px;
+  --radius-2xl: 28px;
+  --radius-pill: 9999px;
+
+  /* 阴影层次 (Elevation Shadows) - 模拟微漫反射 */
+  --shadow-sm: 0 1px 2px 0 rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 12px -2px rgba(15, 23, 42, 0.08), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 12px 28px -4px rgba(15, 23, 42, 0.09), 0 4px 12px -2px rgba(15, 23, 42, 0.05);
+  --shadow-xl: 0 20px 40px -8px rgba(15, 23, 42, 0.12), 0 8px 16px -4px rgba(15, 23, 42, 0.06);
+  --shadow-simulator: 0 25px 60px -15px rgba(27, 147, 196, 0.25), 0 16px 30px -10px rgba(15, 23, 42, 0.18);
+
+  /* 空间间距 (Spacing System) */
+  --space-1: 0.25rem;  /* 4px */
+  --space-2: 0.5rem;   /* 8px */
+  --space-3: 0.75rem;  /* 12px */
+  --space-4: 1rem;     /* 16px */
+  --space-5: 1.25rem;  /* 20px */
+  --space-6: 1.5rem;   /* 24px */
+  --space-8: 2rem;     /* 32px */
+  --space-10: 2.5rem;  /* 40px */
+  --space-12: 3rem;    /* 48px */
+  --space-16: 4rem;    /* 64px */
+  --space-20: 5rem;    /* 80px */
+  --space-24: 6rem;    /* 96px */
+
+  /* 动效过渡 (Transitions) */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 350ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-bounce: 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* 页面版心尺寸 */
+  --max-content-width: 1240px;
+  --header-height: 68px;
+}
+
+/* 尊重减少动态效果偏好 (Accessibility Prefers-Reduced-Motion) */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
